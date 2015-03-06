@@ -6,3 +6,5 @@ git config --global core.quotepath false
 
 设置git gui界面编码
 git config --global gui.encoding utf-8
+
+git config --global i18n.commitencoding utf-8
