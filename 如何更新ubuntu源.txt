@@ -1,0 +1,2 @@
+/etc/apt/source.list
+sudo apt-get update
