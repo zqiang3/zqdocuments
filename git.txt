@@ -1,0 +1,10 @@
+git里的origin到底代表什么意思
+远程仓库默认被称为origin
+
+在~/.gitconfig文件里进行别名设置
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
