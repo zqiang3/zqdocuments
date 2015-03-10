@@ -9,4 +9,6 @@ git config --global gui.encoding utf-8
 
 git config --global i18n.commitencoding utf-8
 
+git config --global i18n.logoutputencoding utf-8 # 日志乱码
+
 alias ls='ls --show-control-chars --color=auto'

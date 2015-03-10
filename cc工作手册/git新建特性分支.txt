@@ -1,0 +1,6 @@
+git flow init
+
+git flow feature start feature-xxx # 增加新特性
+git flow feature publish feature-xxx # 发布新特性，发布新特性分支到远程服务器，其他用户也可以使用此分支
+git flow feature track feature-xxx # 取得一个发布的新特性分支
+git flow feature finish feature-xxx # 完成新特性，合并特性分支到develop，删除这个特性分支，切换回develop分支
