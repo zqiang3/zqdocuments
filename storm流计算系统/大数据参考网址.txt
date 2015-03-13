@@ -1,3 +1,6 @@
 http://manning.com/marz/BDmeapch1.pdf
 
 http://blog.csdn.net/yutianzuijin/article/details/8712735
+
+# 中文资料大全
+http://blog.csdn.net/comaple/article/details/7970714
