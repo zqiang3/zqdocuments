@@ -4,3 +4,9 @@ http://blog.csdn.net/yutianzuijin/article/details/8712735
 
 # 中文资料大全
 http://blog.csdn.net/comaple/article/details/7970714
+
+# 集群安装配置
+http://blog.csdn.net/comaple/article/details/7896167
+
+# 实例
+http://itindex.net/detail/47353-storm-%E7%B3%BB%E5%88%97
