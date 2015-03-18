@@ -1,0 +1,2 @@
+ps -ef # to see every process on the system using standard syntax
+ps aux # to see every process on the system using BSD syntax
