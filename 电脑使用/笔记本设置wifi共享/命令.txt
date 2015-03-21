@@ -1,0 +1,3 @@
+netsh wlan set hostednetwork mode=allow ssid=wifixx key=gaoxiang
+netsh wlan start hostednetwork
+netsh wlan stop hostednetwork
