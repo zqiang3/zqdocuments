@@ -1,0 +1,10 @@
+import redis
+
+r = redis.StrictRedis()
+r.delete(key)
+r.zadd(key, 10, 'zq1')
+r.zadd(key, 20, 'zq2')
+r.zadd(key, 30, 'zq3')
+r.zadd(key, 40, 'zq4')
+
+res = r.zrevrange(key, 0, 2)
