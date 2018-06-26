@@ -1,0 +1,22 @@
+安装python
+
+安装git
+安装tortoisegit
+拷贝.ssh文件夹
+
+安装vmware
+打开已安装虚拟机
+
+安装easy_install pip
+
+配置pycharm
+字体18号
+快速删除行 Ctrl+E
+后退导航   后引号
+
+安装MySQLdb
+32位python安装32位MySQLdb
+
+运行webcc_admin
+安装python扩展包
+安装memcached

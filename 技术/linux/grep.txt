@@ -1,0 +1,1 @@
+grep -a 将binary文件以text文件方式搜寻数据

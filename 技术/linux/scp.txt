@@ -1,0 +1,5 @@
+从本机复制文件到远程机
+scp fork.c gzzhangqiang2014@192.168.45.144:/home/gzzhangqiang2014
+
+# 从远程机复制文件到本机
+scp gzzhangqiang2014@192.168.45.144:/home/gzzhangqiang2014/test.py .

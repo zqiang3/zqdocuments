@@ -1,0 +1,24 @@
+# 列表有自己的sort方法
+
+L = [1, 2, 4, 3, 7, 6]
+L.sort()
+
+# 如果需要一个排序好的副本，同时保持原有的列表不变，怎么实现
+x =[4, 6, 2, 1, 7, 9]
+y = x[ : ]
+y.sort()
+print y #[1, 2, 4, 6, 7, 9]
+print x #[4, 6, 2, 1, 7, 9]
+注意：y = x[:] 通过分片操作将列表x的元素全部拷贝给y，如果简单的把x赋值给y：y = x，y和x还是指向同一个列表，并没有产生新的副本。
+
+另一种方法是使用sorted函数
+y = sorted(x)
+
+
+# sorted函数
+sorted(data, cmp=None, key=None, reverse=False) 
+key 是带一个参数的函数, 用来为每个元素提取比较值. 默认为 None, 即直接比较每个元素
+
+由tuple组成的list排序
+students = [('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10),]
+sorted(students, key=lambda student: student[2])

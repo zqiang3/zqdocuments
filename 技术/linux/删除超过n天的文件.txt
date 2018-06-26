@@ -1,0 +1,1 @@
+find . -mtime +15 -name "*log*" -exec rm -f {} \;

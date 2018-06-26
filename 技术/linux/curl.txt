@@ -1,0 +1,2 @@
+curl -d 'abc=def' 'http://www.sina.com'  # 使用post方式请求
+curl -i xxx  # 请求响应头

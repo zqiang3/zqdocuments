@@ -1,0 +1,15 @@
+tmux
+PREFIX d：退出tmux窗口，tmux仍在后台运行，可以通过tmux attach进入到指定的会话
+C-b % 竖切分
+C-b " 横切分
+C-b ! 关闭所有的小窗口
+C-b -> 右边窗口
+C-b <- 左边窗口
+
+
+PREFIX 默认CTRL+b
+在~/.tmux.conf中加入如下行，没有~/.tmux.conf文件自己建立一个即可。 
+set -g prefix C-a 
+unbind C-b 
+此时并没有生效，重启tmux或者在命令模式（按PREFIX : )输入 
+source-file ~/.tmux.conf 
