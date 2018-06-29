@@ -1,6 +1,6 @@
 ﻿配置git alias命令
-git config --global user.name "邮箱前缀" 
-git config --global user.email "邮箱前缀@corp.netease.com" 
+git config --global user.name "gzzhangqiang2014" 
+git config --global user.email "gzzhangqiang2014@corp.netease.com" 
 git config --global alias.co checkout
 git config --global alias.ci commit
 git config --global alias.di diff

@@ -1,0 +1,7 @@
+extern void bzero(void *s, int n)
+置字节字符串的前n个字节为零且包括\0
+
+使用string.h文件
+
+推荐使用memset代替bzero
+void *memeset(void *s, int ch, size_t n);
