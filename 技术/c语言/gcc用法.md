@@ -38,7 +38,7 @@ void hello()
 ## 一次编译多个文件
 
 ```sh
-gcc main.c hello.c -o hello
+gcc main.chello.c -o hello
 ```
 
 ## 分别编译和链接
