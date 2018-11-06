@@ -113,3 +113,73 @@ nameko run module:[ServiceClass]
 ```
 
 这里的意思是运行某module下的所有服务或者运行某module下的特定的ServiceClass服务。
+
+
+
+```python
+from nameko.containers import ServiceContainer
+
+class Service(object):
+    name = 'service'
+
+
+container = ServiceContainer(Service, config={})
+
+service_extensions = list(container.extensions)
+print 'ext', service_extensions
+
+container.start()
+
+container.stop()
+```
+
+## 4. 内建扩展
+
+### RPC
+
+Nameko包含了一个基于AMQP的RPC实现。它包括@rpc入口点，一个与其他服务对话的代理，以及一个非Nameko客户端也能发起RPC调用到集群的独立的代理
+
+```python
+# python test_rpc.py
+
+from nameko.standalone.rpc import ClusterRpcProxy
+
+config = {
+        'AMQP_URI': 'pyamqp://guest:guest@localhost'
+        }
+
+output = ''
+with ClusterRpcProxy(config) as cluster_rpc:
+    output = cluster_rpc.service_x.remote_method('hello')
+
+print 'output=', output
+```
+
+
+
+```python
+# nameko run rpc   ## run service_x, service_y
+
+from nameko.rpc import rpc, RpcProxy
+
+class ServiceY(object):
+    name = 'service_y'
+
+    @rpc
+    def append_id(self, value):
+        print 'service_y rpc called'
+        return u'{}-y'.format(value)
+
+
+class ServiceX(object):
+    name = 'service_x'
+
+    y = RpcProxy('service_y')
+
+    @rpc
+    def remote_method(self, value):
+        print 'service_x rpc called'
+        res = u'{}-x'.format(value)
+        return self.y.append_id(res)
+```
+
