@@ -1,3 +1,0 @@
-printfº¯ÊýÔ­ÐÍ
-
-if(!s) s = '<NULL>'
