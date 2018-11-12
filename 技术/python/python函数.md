@@ -14,7 +14,23 @@ foo(y=1, x=3)  # 5
 
 
 
-### 嵌套函数
+### 内嵌函数
+
+内部函数处于外部函数的作用域内
+
+简单例子：
+
+```
+def foo():
+	def bar():
+		print 'this is bar()'
+	print 'this is foo()'
+	
+foo()
+bar()  # error
+```
+
+
 
 ```python
 def outer():
