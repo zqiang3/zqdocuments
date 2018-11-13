@@ -1,4 +1,0 @@
-git push origin --delete feature/xxx
-
-µÈÍ¬ÓÚ
-git push origin :master
