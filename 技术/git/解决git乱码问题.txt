@@ -2,7 +2,6 @@
 
 解决方案
 在bash提示符下输入:
-git config --global core.quotepath false
 
 设置git gui界面编码
 git config --global gui.encoding utf-8
