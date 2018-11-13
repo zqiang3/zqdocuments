@@ -3,7 +3,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-
 #define MAX 10
 
 int main(int argc, char **argv)
@@ -30,5 +29,4 @@ int main(int argc, char **argv)
     close(fd);
     return 0;
 }
-
 
