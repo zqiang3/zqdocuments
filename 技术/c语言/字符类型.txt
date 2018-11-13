@@ -1,6 +1,0 @@
-char类型只占一个字节，可以对char类型的值进行算术运算
-可以把char类型解释为一个字符，也可解释为一个整数。
-scanf() %c
-存储多字符码时，需要使用wchar_t类型，在<stddef.h>
-wchar_t w_ch = L'A';
-%lc

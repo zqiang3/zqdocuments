@@ -27,15 +27,11 @@ input string from a stream
 
 **Purpose** 
 
-get a string, up to count-1 chars or '\n', whichever comes first,
+Reads characters from stream and stores them as a C string into str until (num-1) characters have been read or either a newline or the End-of-File is reached, whichever comes first.
+A newline character makes fgets stop reading, but it is considered a valid character and therefore it is included in the string copied to str.
+A null character is automatically appended in str after the characters read to signal the end of the C string.
 
-append '\0' and put the whole thing into string. the '\n' IS included
-
-in the string. if count<=1 no input is requested. if EOF is found
-
-immediately, return NULL. if EOF found after chars read, let EOF
-
-finish the string as '\n' would. 
+if count<=1, no input is requested. if EOF is found immediately, return NULL. if EOF found after chars read, let EOF finish the string as '\n' would. 
 
 **Entry**
 
