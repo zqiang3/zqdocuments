@@ -1,7 +1,0 @@
-# 远程分支关联
-
-git push --set-upstream origin xxx
-
-或git push -u origin xxx
-
-命令的最终修改都是针对config文件
