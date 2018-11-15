@@ -1,6 +1,5 @@
-## 读取字符
-```
-c
+﻿## 读取字符
+```c
 #include <stdio.h>
 
 int main()
@@ -18,8 +17,7 @@ int main()
 ```
 
 ## *的使用
-```
-c
+```c
 #include <stdio.h>
 
 int main()
