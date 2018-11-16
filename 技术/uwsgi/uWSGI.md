@@ -1,5 +1,15 @@
 ## uWSGI的安装
+
+uWSGI is a (big) C application, so you need a C compiler (like gcc or clang) and the Python development headers.
+
+```bash
 pip install uwsgi
+# 或出错可能是缺少python-dev build-essential
+sudo apt-get install python-dev
+sudo apt-get install build-essential  # On a Debian-based distro
+```
+
+
 
 ## uWSGI的主要特点
 超快的性能
@@ -17,3 +27,44 @@ uwsgi --http :9090 --wsgi-file foobar.py
 monitor understanding what is going on is vital in production deployment
 
 --chdir  move to a specific directory
+
+## 在前端放置nginx
+
+Do not use `--http` when you have a frontend webserver or you are doing some form of benchmark, use `--http-socket`. Continue reading the quickstart to understand why.
+
+### 使用uwsgi协议
+
+按如下方式配置：
+
+```nginx
+location / {
+    uwsgi_pass 127.0.0.1:9090;
+}
+```
+
+This means “pass every request to the server bound to port 9090 speaking the uwsgi protocol”.
+
+nginx 会将每个请求转发到本地9090端口，使用的是uwsgi协议。
+
+运行usgi：(注意使用 --socket)
+
+```bash
+uwsgi  --socket 127.0.0.1:9090 --wsgi-file testapp.py
+```
+
+## 使用http协议
+
+nginx配置
+
+```nginx
+location / {
+    proxy_pass http://127.0.0.1:9090;
+}
+```
+
+运行usgi：(注意使用 --http-socket，不同于--http, --http是直接启一个http代理接收请求)
+
+```bash
+uwsgi  --socket 127.0.0.1:9090 --wsgi-file testapp.py
+```
+
