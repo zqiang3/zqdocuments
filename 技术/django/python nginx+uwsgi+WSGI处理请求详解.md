@@ -1,0 +1,1 @@
+作为python web开发，我们首先要弄清楚，到底一个请求过来，发生了什么事，请求的传递是怎么样完成的，由nginx是怎么转发到uwsgi, uwsgi又是怎样把请求传给到我们的框架（django or falsk）

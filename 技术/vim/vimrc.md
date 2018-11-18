@@ -42,6 +42,7 @@ map <C-d> dd
 "inoremap { {<CR>}<Esc>ka<CR><tab>          "若c语言自动缩进，可删去最后的<tab>
 "inoremap { {}<Esc>i<CR><Up><Right><CR><tab>
 inoremap { {}<left>
+inoremap [ []<left>
 inoremap ( ()<left>
 inoremap < <><left>
 inoremap " ""<left>
@@ -57,7 +58,7 @@ func! CompileRunGcc()
     elseif &filetype == 'c'
         exec '!g++ % -o %<'
         exec '!time ./%<'
-    elseif &filetype == 'python'
+    elseif &filetype == 'python'：x
         exec '!time python %'
 
     endif

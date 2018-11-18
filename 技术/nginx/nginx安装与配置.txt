@@ -1,5 +1,0 @@
-http://www.cnblogs.com/hanyinglong/archive/2016/02/04/5141504.html
-
-Nginx安装后只有一个程序文件，本身并不提供各种管理程序，它是使用参数和系统信号机制对Nginx进程本身进行控制的。
-
-nginx -t 检查配置文件正确性
