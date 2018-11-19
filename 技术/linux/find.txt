@@ -1,3 +1,0 @@
-在某个路径下查找所有包含“hello abcserver”字符串的文件。
-
-find . -name “*.py” | xargs grep “hello world”
