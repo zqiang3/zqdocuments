@@ -7,7 +7,40 @@ VA_LIST 是在C语言中解决变参问题的一组宏，变参问题是指参�
 3. 然后用VA_ARG返回可变的参数，VA_ARG的第二个参数是你要返回的参数的类型（如果函数有多个可变参数的，依次调用VA_ARG获取各个参数）；
 4. 最后用VA_END宏结束可变参数的获取。
 
-## 示例
+## 示例1
+
+```c
+#include <stdarg.h>
+#include <stdio.h>
+int sum_int(int n, ...);
+
+int main(void)
+{
+    int sum = sum_int(3, 2, 3, 1);
+    printf("sum = %d\n", sum);
+    return 0;
+}
+
+
+int sum_int(int n, ...)
+{
+    int sum = 0;
+
+    va_list args;
+    va_start(args, n);
+
+    for(int i = 0; i < n; i++)
+        sum += va_arg(args, int);
+
+    va_end(args);
+
+    return sum;
+}
+```
+
+
+
+## 示例2
 
 ```c
 #include <stdarg.h> 
