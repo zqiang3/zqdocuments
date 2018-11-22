@@ -28,13 +28,29 @@ monitor understanding what is going on is vital in production deployment
 
 --chdir  move to a specific directory
 
+## wsgi-file
+
+```python
+def application(env, start_response):
+    """test application
+    """
+    content = [
+        ('Content-Type', 'text/html'),
+    ]
+    start_response('200 OK', content)
+    res_str = 'Hello, {}\n'.format(__name__)
+    return [res_str]
+```
+
+
+
 ## 在前端放置nginx
 
 Do not use `--http` when you have a frontend webserver or you are doing some form of benchmark, use `--http-socket`. Continue reading the quickstart to understand why.
 
 ### 使用uwsgi协议
 
-按如下方式配置：
+nginx按如下方式配置：
 
 ```nginx
 location / {
@@ -68,3 +84,23 @@ location / {
 uwsgi  --socket 127.0.0.1:9090 --wsgi-file testapp.py
 ```
 
+uwsgi_pass使用的是uwsgi协议，proxy_pass使用HTTP协议与uWSGI server交互。
+
+## nginx和uwsgi的关系
+
+nginx是前端服务器，负责接收请求。
+
+uwsgi是一种通信协议，负责在服务器和应用程序间进行数据通信。
+
+**通信过程**： 
+
+客户端发送一个http请求，被nginx服务器接收，nginx服务器将请求转发给uwsgi,uwsgi将请求转发给实现uwsgi协议的应用程序(flask,gunicorn等等)
+
+## uWSGI配置
+
+chdir为项目路径
+module为项目中的模块
+enable-threads允许用内嵌的语言启动线程。这将允许你在app程序中产生一个子线程。
+lazy-appsuwsgi 只要可能的情况下都用 fork() 来复制。默认，他会在加载应用后执行 fork 。如果你不想使用 --lazy选项。开启它，会知道uwsgi来加载应用。lazy模式优雅的重启works：代替重载的是，每个worker轮流着reload。如果你使用'lazy app loading'，但你想维持标准的uwsgi重载行为，在1.3之后你可以使用 --lazy-apps 选项。
+
+touch-reload 优雅的重启uWSGI 

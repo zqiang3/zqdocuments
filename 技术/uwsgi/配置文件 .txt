@@ -1,6 +1,0 @@
-chdir为项目路径
-module为项目中的模块
-enable-threads允许用内嵌的语言启动线程。这将允许你在app程序中产生一个子线程。
-lazy-appsuwsgi 只要可能的情况下都用 fork() 来复制。默认，他会在加载应用后执行 fork 。如果你不想使用 --lazy选项。开启它，会知道uwsgi来加载应用。lazy模式优雅的重启works：代替重载的是，每个worker轮流着reload。如果你使用'lazy app loading'，但你想维持标准的uwsgi重载行为，在1.3之后你可以使用 --lazy-apps 选项。
-
-touch-reload 优雅的重启uWSGI 
