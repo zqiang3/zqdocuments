@@ -34,7 +34,7 @@ Do not use `--http` when you have a frontend webserver or you are doing some for
 
 ### 使用uwsgi协议
 
-按如下方式配置：
+nginx按如下方式配置：
 
 ```nginx
 location / {
@@ -68,3 +68,14 @@ location / {
 uwsgi  --socket 127.0.0.1:9090 --wsgi-file testapp.py
 ```
 
+uwsgi_pass使用的是uwsgi协议，proxy_pass使用HTTP协议与uWSGI server交互。
+
+## nginx和uwsgi的关系
+
+nginx是前端服务器，负责接收请求。
+
+uwsgi是一种通信协议，负责在服务器和应用程序间进行数据通信。
+
+**通信过程**： 
+
+客户端发送一个http请求，被nginx服务器接收，nginx服务器将请求转发给uwsgi,uwsgi将请求转发给实现uwsgi协议的应用程序(flask,gunicorn等等)

@@ -1,1 +1,0 @@
-uwsgi_pass使用的是uwsgi协议，proxy_pass使用HTTP协议与uWSGI server交互。
