@@ -28,6 +28,22 @@ monitor understanding what is going on is vital in production deployment
 
 --chdir  move to a specific directory
 
+## wsgi-file
+
+```python
+def application(env, start_response):
+    """test application
+    """
+    content = [
+        ('Content-Type', 'text/html'),
+    ]
+    start_response('200 OK', content)
+    res_str = 'Hello, {}\n'.format(__name__)
+    return [res_str]
+```
+
+
+
 ## 在前端放置nginx
 
 Do not use `--http` when you have a frontend webserver or you are doing some form of benchmark, use `--http-socket`. Continue reading the quickstart to understand why.
