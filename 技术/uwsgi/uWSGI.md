@@ -20,17 +20,24 @@ sudo apt-get install build-essential  # On a Debian-based distro
 
 ## quick start
 
-uwsgi --http :9090 --wsgi-file foobar.py
+uwsgi 
+
+--http :9090 (或--socket --http-socket)
+
+--wsgi-file foobar.py
 --processes
 --threads
 
-monitor understanding what is going on is vital in production deployment
+--stats 127.0.0.1:9191
 
---chdir  move to a specific directory
+(The stats subsystem allows you to export uWSGI’s internal statistics as JSON)
 
-## wsgi-file
+--chdir  (move to a specific directory)
+
+## WSGI application
 
 ```python
+# foobar.py
 def application(env, start_response):
     """test application
     """
