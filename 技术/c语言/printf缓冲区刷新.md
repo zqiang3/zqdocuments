@@ -6,7 +6,7 @@
 5. 程序结束时。
 
 ## 代码示例
-```
+```c
 c
 #include <stdio.h>
 
@@ -39,3 +39,4 @@ void test2()
     printf("this is second line\n");
 }
 ```
+
