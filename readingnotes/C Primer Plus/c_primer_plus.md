@@ -1,4 +1,4 @@
-# 第十章 数组和指针
+# 第10章 数组和指针
 
 ## 要点
 
@@ -31,3 +31,43 @@ C把数组名解释为数组首元素的地址。使用数组名传参时，是�
 如果不想修改原数组，在函数声明中可以为形式参量加上关键字const。
 
 对指针进行增量运算时，指针值的改变是以指针相应类型的字节大小为单位的。
+
+# 第13章 文件输入/输出
+
+
+
+* fopen(), getc(), putc(), exit(), fclose(), fprintf(), fscanf(), fgets(), fputs(), rewind(), fseek(), ftell(), fflush(), fgetpos(), fsetpos(), feof(), ferror(), ungetc(), setvbuf(), fread(), fwrite()
+
+## 概要
+
+文件是什么：C将文件看成是连续的字节序列，每个字节都可被单独读取。
+
+文本视图和二进制视图。使用文本视图时，会将行尾换行符进行相应转换。
+
+标准文件：标准输入、标准输出、标准错误
+
+exit, EXIT_SUCESS, EXIT_FAILURE
+
+fopen()，如果文件不能打开，返回NULL
+
+文件指针，FILE，文件指针指向一个关于文件信息的数据包，其中包括文件I/O使用的缓冲区信息。
+
+getc(), putc()
+
+文件结尾 EOF(-1)
+
+fclose(), 成功返回0，否则返回EOF
+
+fprintf(), fscanf(), fgets(), fputs()
+
+fseek(), ftell() SEEK_SET, SEEK_CUR, SEEK_END，可移植性，文件大小只能在long类型表示范围之内
+
+UNIX文本文件通常不包含Ctrl+Z和\r。
+
+fgetpos() fsetpos()
+
+I/O内幕
+
+fread(), fwrite()
+
+feof() ferror()
