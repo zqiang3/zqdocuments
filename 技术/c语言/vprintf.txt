@@ -1,1 +1,0 @@
-int vprintf(FILE *stream, char *format, va_list param);
