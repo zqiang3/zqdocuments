@@ -50,3 +50,9 @@ gcc main.o hello.o -o hello
 ```
 
 除了生成一个可执行文件hello外，还会生成两个中间文件main.o和hello.o
+
+
+
+## -w -W -Wall
+
+https://blog.csdn.net/m7548352/article/details/49520069
