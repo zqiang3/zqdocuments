@@ -20,7 +20,7 @@ foo(y=1, x=3)  # 5
 
 简单例子：
 
-```
+```python
 def foo():
 	def bar():
 		print 'this is bar()'
@@ -28,6 +28,17 @@ def foo():
 	
 foo()
 bar()  # error
+```
+
+```python
+def foo():
+	n = 3
+	def bar():
+		n -= 1   # error
+		print 'this is bar()'
+	print 'this is foo()'
+	
+foo()
 ```
 
 
