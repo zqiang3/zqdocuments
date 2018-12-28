@@ -28,6 +28,20 @@ char *gets(char *buf);  // dangerous
 int fputs(const char *restrict str, FILE *restrect fp);
 int puts(const char *str);
 // Both return: non-negative value if OK, EOF on error
+
+size_t fread(void *restrict ptr, size_t size, size_t nobj, FILE *restrict fp);
+size_t fwrite(const void *restrict ptr, size_t size, size_t nobj, FILE *restrict fp);
+// Both return number of objects read or written
+
+long ftell(FILE *fp);  // Return current file position if OK, -1L on error
+int fseek(FILE *fp, long offset, int whence);  // Return 0 if OK, nonzero on error
+void rewind(FILE *fp);
+
+char *tmpnam(char *ptr);  // Returns: pointer to unique pathname
+FILE *tmpfile(void);  // Returns: file pointer if OK, NULL on error
+
+char *tempnam(const char *derectory, const char *prefix);  // Returns: pointer to unique pathname
+int mkstemp(char *template);  // Returns: file descriptor if OK, -1 on error
 ```
 
 
