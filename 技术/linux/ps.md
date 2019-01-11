@@ -196,3 +196,15 @@ ps -e -o pid,comm,etime
 watch -n 1 'ps au'
 ```
 
+## 自定义输出列
+
+```bash
+ ps -o pid,ppid,pgid,sid,comm
+```
+
+## 显示某个进程启动时间
+
+```bash
+ps -p PID -o lstart
+```
+
