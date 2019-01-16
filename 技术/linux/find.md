@@ -8,3 +8,4 @@ find 查找目录 -name 文件名
 find . -name “*.py” | xargs grep “hello world”
 ```
 
+-print： find命令将匹配的文件输出到标准输出

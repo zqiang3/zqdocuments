@@ -1,9 +1,0 @@
-@app.route
-
-这篇文章主要介绍了python的flask框架中route的用法，包括相关的正则表达式讲解，是flask学习中的基础知识。
-
-为URL加入可变参数
-
-@app.route("/hello/<username>")
-def hello_user(username):
-	return "Hello {}".format(username)
