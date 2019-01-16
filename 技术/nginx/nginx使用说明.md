@@ -43,3 +43,15 @@ listener监听端口
 server_name监听域名
 
 location{}是用来为匹配的 URI 进行配置，URI 即语法中的“/uri/”。location  / { }匹配任何查询，因为所有请求都以 / 开头。
+
+## 转发HTTP请求
+
+如es监听9200端口，可用nginx监听80端口，将地址/es的请求转发到es。客户端可通过地址http://yoursite:80/es请求es服务
+
+```
+location /es {
+    proxy_pass http://localhost:9200/;
+}
+
+```
+
