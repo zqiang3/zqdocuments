@@ -3,7 +3,7 @@
     cout << "Bits per byte: " << CHAR_BIT << endl;
 
     cout << "size of type:" << endl;
-    cout << "char is " << sizeof(char) << " bytes." << endl;
+    cout << "char is " << sizeof (char) << " bytes." << endl;
     cout << "short is " << sizeof(short) << " bytes." << endl;
     cout << "int is " << sizeof(int) << " bytes." << endl;
     cout << "long is " << sizeof(long) << " bytes." << endl;
@@ -18,4 +18,17 @@
     cout << "unsigned int: " << UINT_MAX << endl;
     cout << "long: " << LONG_MAX << endl;
     cout << "long long: " << LLONG_MAX << endl;
+```
+
+**字符的字面量**
+在Release 2.0之后，c++将字符常量存储为char类型，而不是int类型
+```c
+
+int main()
+{
+    char c = 'c';
+    printf("sizeof char: %d\n", sizeof(c));
+    printf("字符的字面量被存储为int: %d", sizeof('c'));
+}
+
 ```
