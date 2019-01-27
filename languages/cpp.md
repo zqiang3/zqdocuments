@@ -32,3 +32,18 @@ int main()
 }
 
 ```
+
+**char16_t, char32_t**
+```c++
+int main()
+{
+    using namespace std;
+
+    char16_t ch2 = u'q';
+    cout << ch2 << endl;
+    cout << sizeof ch2 << endl;
+}
+
+> g++ -std=c++11 test.cpp
+```
+
