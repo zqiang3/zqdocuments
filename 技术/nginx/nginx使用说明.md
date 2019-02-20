@@ -19,9 +19,26 @@ Nginx的安装目录在 /etc 有，/usr/lib 下有，/usr/sbin下有
 配置文件/etc/nginx/sites-enabled
 
 # nginx的主要操作
+
+
 启动 停止 平滑重启
 
 如果新的配置文件应用失败，则继续使用旧的配置进行工作
+
+```bash
+# /etc/init.d/nginx
+service nginx start
+service nginx stop
+
+nginx
+nginx -t
+nginx -s reopen
+ningx -s reload
+nginx -s stop
+nginx -s quit
+```
+
+
 
 # pid
 /run/nginx.pid
