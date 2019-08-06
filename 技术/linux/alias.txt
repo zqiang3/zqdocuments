@@ -1,7 +1,0 @@
-alias
-unalias vi
-unalias -a # 谨慎使用
-
-alias ls='ls --color=auto'
-
-# 让别名永久生效

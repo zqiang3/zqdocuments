@@ -1,1 +1,0 @@
-备份并替换/etc/apt/sources.list 的源内容

@@ -1,2 +1,0 @@
-ipconfig/flushdns
-重建本地的DNS缓存

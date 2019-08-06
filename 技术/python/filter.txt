@@ -1,5 +1,0 @@
-用于过滤序列
-
-filter(func, list)
-
-b = filter(lambda x: x> 5, a)

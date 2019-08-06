@@ -1,1 +1,0 @@
-reverse(viewname, urlconf=None, args=None, kwargs=None, current_app=None)

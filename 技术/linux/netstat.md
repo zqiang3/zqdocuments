@@ -1,4 +1,0 @@
-```bash
-netstat -apno
-```
-

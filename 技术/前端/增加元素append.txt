@@ -1,2 +1,0 @@
-var txt = "<option value='" + 'sid' + "'>" + 'sid' + "</option>"
-            $("#keys").append(txt)

@@ -1,2 +1,0 @@
-64.233.183.139 clients4.google.com
-64.233.183.139 docs.google.com

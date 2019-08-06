@@ -1,1 +1,0 @@
-round(x)返回最接近x的整数。If x is equally close to two multiples, Python 2 rounds to the nearest multiple away from zero(for example, 0.5 is rounded to 1.0 and -0.5 is rounded to -1.0)
